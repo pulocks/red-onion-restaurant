@@ -1,0 +1,21 @@
+.review-container{
+    display: flex;
+}
+
+.shipping-container{
+    width: 60%;
+    margin-left: 50px;
+}
+
+.shipping-container input{
+    width: 250px;
+}
+
+.place-order{
+   height: 40px;
+   width: 200px;
+   background-color: goldenrod;
+   border-radius: 8px;
+   color: white; 
+}
+

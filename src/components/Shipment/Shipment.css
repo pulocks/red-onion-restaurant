@@ -1,0 +1,34 @@
+.shipment{
+    display: flex;
+    margin: 80px;
+}
+
+.map-container{
+    width: 70%;
+    
+}
+
+.map-container img{
+    width: 600px;
+    height: 400px;
+}
+
+.summary-container{
+    padding: 20px;
+    background-color: lightblue;
+}
+
+.top{
+    margin-bottom: 100px;
+}
+
+.bottom{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.contact-button{
+    width: 150px;
+    height: 40px;
+    background-color: red;
+}

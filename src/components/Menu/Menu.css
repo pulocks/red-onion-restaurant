@@ -1,0 +1,12 @@
+.menu{
+    padding: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 5px lightgray;
+    height: 350px;
+    width: 350px;
+}
+
+.menu img{
+    height: 200px;
+    width: 200px;
+}

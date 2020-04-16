@@ -1,0 +1,20 @@
+.menu-container{
+    margin-left: 200px;
+}
+.firstThree{
+    display: flex;
+}
+
+.lastThree{
+    display: flex;
+}
+
+.checkout-button{
+    margin-left: 400px;
+    height: 40px;
+    width: 180px;
+    background-color: goldenrod;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+}

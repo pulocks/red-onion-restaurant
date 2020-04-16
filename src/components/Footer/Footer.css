@@ -1,0 +1,20 @@
+.footer-container{
+    margin: 50px;
+
+}
+.mid-footer{
+    display: flex;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mid-footer img{
+    width: 400px;
+    height: 400px;
+    padding-right: 10px;
+}
+
+.bottom-footer img{
+    width: 100%;
+    display: block;
+}
