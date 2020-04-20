@@ -15,7 +15,7 @@ const Review = (props) => {
         const newCart = cart.filter(item => item.id !== key);
         setCart(newCart);
         removeFromDatabaseCart(key);
-        prompt('Selected item will be removed from the cart');
+        alert('Selected item has been removed from the cart');
     }
 
     useEffect(() => {

@@ -26,8 +26,8 @@ const MenuDetails = () => {
             let totalItem = document.getElementById('total-item').value;
             let totalItemNumber = parseInt(totalItem);
             totalItemNumber -= 1;
-            if(totalItemNumber === -1) {
-                totalItemNumber = 0;
+            if(totalItemNumber === 0) {
+                totalItemNumber = 1;
             }
             document.getElementById('total-item').value = totalItemNumber;
             totalValue(totalItemNumber);
@@ -43,7 +43,7 @@ const MenuDetails = () => {
     const handleAddMenu = () => {
         const quantity = parseInt(document.getElementById('total-item').value);
         addToDatabaseCart(menuKey, quantity);
-        prompt(`${quantity} items of the product added to your cart. Go to main menu to show your cart`);
+        alert(`${quantity} items of the product added to your cart. Go to main menu to show your cart`);
     }
 
     return (

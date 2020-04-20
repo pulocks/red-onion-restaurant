@@ -31,7 +31,7 @@ const LogIn = () => {
 
     const isValidEmail = email => /(.+)@(.+){2,}\.(.+){2,}/.test(email);
 
-    const handleChange = (event) => {
+    const handleChange = event => {
         const newUserInfo = {...user};
 
         if(event.target.name === 'email') {
@@ -63,6 +63,7 @@ const LogIn = () => {
                 const createdUser = {...user};
                 createdUser.isSignedIn = false;
                 createdUser.error = err.message;
+                console.log(err.message);
                 setUser(createdUser);
             })
         } 
