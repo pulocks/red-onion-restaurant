@@ -57,7 +57,7 @@ const LogIn = () => {
                 createdUser.isSignedIn = true;
                 createdUser.error = '';
                 setUser(createdUser);
-                prompt('Account created successfully....');
+                alert('Account created successfully....');
             })
             .catch(err => {
                 const createdUser = {...user};

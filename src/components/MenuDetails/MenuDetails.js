@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import foodMenus from '../../FoodMenus';
 import './MenuDetails.css';
 import { addToDatabaseCart } from '../../utilities/databaseManager';
+import { useEffect } from 'react';
 
 const MenuDetails = () => {
     const {menuKey} = useParams();
-    const menu = foodMenus[menuKey-1];
+    const [menu, setMenu] = useState({});
+
+    useEffect(() => {
+        fetch('https://evening-journey-66665.herokuapp.com/item/' + menuKey)
+        .then(res => res.json())
+        .then(data => {
+            setMenu(data);
+        })
+    }, [menuKey]);
+
     const {name, price, img} = menu;
 
     const handleAddItem = () => {
@@ -45,7 +54,7 @@ const MenuDetails = () => {
         addToDatabaseCart(menuKey, quantity);
         alert(`${quantity} items of the product added to your cart. Go to main menu to show your cart`);
     }
-
+    
     return (
         <div className="menu-details">
             <div className="menu-information">
@@ -64,7 +73,7 @@ const MenuDetails = () => {
                 <button className="main-button" onClick={handleAddMenu}>Add</button>
             </div>
             <div className="menu-image">
-                <img src={img} alt=""/>
+                <img src={menu.img} alt=""/>
             </div>
         </div>
     );

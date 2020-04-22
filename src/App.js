@@ -15,6 +15,7 @@ import Review from './components/Review/Review';
 import LogIn from './components/LogIn/LogIn';
 import Shipment from './components/Shipment/Shipment';
 import Footer from './components/Footer/Footer';
+import Inventory from './components/Inventory/Inventory';
 
 function App() {
   return (
@@ -47,6 +48,9 @@ function App() {
           </Route>
           <Route path="/shipment">
             <Shipment></Shipment>
+          </Route>
+          <Route path="/inventory">
+            <Inventory></Inventory>
           </Route>
           <Route exact path="/">
             <Home></Home>

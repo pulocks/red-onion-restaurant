@@ -4,7 +4,7 @@
 }
 
 .logo{ 
-    width: 80%;
+    width: 75%;
 }
 
 .logo img{
@@ -19,6 +19,12 @@
 .link nav a{
     padding: 20px;
     text-decoration: none;
+}
+
+.cartLength{
+    color: red;
+    font-weight: 700;
+    font-size: large;
 }
 
 .header-mid{

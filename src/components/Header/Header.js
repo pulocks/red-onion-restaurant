@@ -2,8 +2,14 @@ import React from 'react';
 import './Header.css';
 import logo from '../../logo.png';
 import icon from '../../ICON/Path 1.png';
+import { getDatabaseCart } from '../../utilities/databaseManager';
 
 const Header = () => {
+
+    const savedCart = getDatabaseCart();
+    const keys = Object.keys(savedCart);
+    const len = keys.length;
+    
     return (
         <div className="header">
 
@@ -14,8 +20,9 @@ const Header = () => {
                 </div>
                 <div className="link">
                     <nav>
-                        <a href="/review"><img src={icon} alt=""/></a>
+                        <a href="/"><span className="cartLength">{len} </span><img src={icon} alt=""/></a>
                         <a href="/login">Login</a>
+                        <a href="/inventory">Inventory</a>
                     </nav>
                 </div>
 

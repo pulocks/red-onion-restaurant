@@ -5,5 +5,8 @@
 
 .login input{
     color: blue;
+    background-color: 1px solid gray;
+    border-radius: 2px;
+    margin-top: 10px;
 }
 

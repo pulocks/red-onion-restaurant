@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Home.css';
-import foodMenus from '../../FoodMenus';
 import Menu from '../Menu/Menu';
 import { getDatabaseCart } from '../../utilities/databaseManager';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Home = () => {
 
-    const lunchMenu = foodMenus.slice(0, 6);
+    const [menu, setMenu] = useState([]);
+
+    useEffect(() =>{
+        fetch('https://evening-journey-66665.herokuapp.com/items')
+        .then(res => res.json())
+        .then(data => {
+            setMenu(data);
+        })
+    }, []);
+
+    const lunchMenu = menu.filter(item => item.category === 'lunch');
 
     const savedCart = getDatabaseCart();
     const empty = isEmpty(savedCart);

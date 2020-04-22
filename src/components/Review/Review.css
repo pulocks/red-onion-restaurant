@@ -19,3 +19,17 @@
    color: white; 
 }
 
+.ship-form input{
+    display: block;
+    margin-top: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.error{
+    color: red;
+}
+
+.payment{
+    padding-right: 300px;
+}
